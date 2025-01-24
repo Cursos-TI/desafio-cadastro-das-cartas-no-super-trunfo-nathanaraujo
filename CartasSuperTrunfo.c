@@ -24,13 +24,15 @@ int main() {
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
 
     printf("Qual é o nome da cidade?\n");
-    //scanf("%s", &nomeCidade);
     scanf("%[^\n]", &nomeCidade);
-    //fgets(nomeCidade, 50, stdin);
+    /*
+    não funcionou porque não lê espaços
+    scanf("%s", &nomeCidade);
+    */
 
     printf("Qual é o estado? (A-H)\n");
     scanf("%s", estado);
-
+   
     printf("Qual é o codigo da cidade? (01-04)\n");
     scanf("%d", &numCidade);
 
@@ -53,8 +55,8 @@ int main() {
     printf("\n\n\n##### CARTA CADASTRADA #####\n");
     
     printf("____________________________\n\n");
-    printf("%s\n\n", nomeCidade);
-    printf("\nCÓDIGO DA CIDADE - %s0%d\n", estado, numCidade);
+    printf("%s • %s0%d\n\n", nomeCidade, estado, numCidade);
+    //printf("\nCÓDIGO DA CIDADE - %s0%d\n", estado, numCidade);
     printf("POPULAÇÃO - %d pessoas\n", populacao);
     printf("ÁREA - %.2f km²\n", area);
     printf("PIB - %.2lf milhões de reais\n", pib);
