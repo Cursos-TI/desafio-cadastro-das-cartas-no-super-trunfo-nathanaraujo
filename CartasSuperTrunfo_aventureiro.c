@@ -4,7 +4,7 @@
 // Início do código
 
 int main() {
-    printf ("Desafio Super Trunfo - Países \n");
+    printf ("\nDesafio Super Trunfo - Países \n");
 
     // Declaração de variáveis do jogo
 
