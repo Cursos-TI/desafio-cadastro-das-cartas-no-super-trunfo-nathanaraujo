@@ -13,15 +13,19 @@ int main() {
     int numCidade;
     int populacao;
     float area;
-    double pib;
+    float pib;
+    float pibMilhoes;
     int pontosTur;
-    
+    // nivel aventureiro
+    float densidade;
+    float pibPerCapita;
+        
     // Cadastro das Cartas
     // Solicita ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
 
 
     printf("Qual é o nome da cidade?\n");
-    scanf("%[^\n]", &nomeCidade);
+    scanf("%[^\n]", nomeCidade);
     /*
     não funcionou porque não lê espaços
     scanf("%s", &nomeCidade);
@@ -39,11 +43,18 @@ int main() {
     printf("Qual é a área da cidade? (km²)\n");
     scanf("%f", &area);
 
-    printf("Qual é o PIB da cidade (em milhões de reais)\n");
-    scanf("%lf", &pib);
+    printf("Qual é o PIB da cidade?\n");
+    scanf("%f", &pib);
 
     printf("Quantos pontos turísticos têm na cidade?\n");
     scanf("%d", &pontosTur);
+
+    densidade = (float) populacao / area;
+
+    //transforma o pib cheio em milhões para mostrar na carta cadastrada
+    pibMilhoes = pib / 1000000;
+
+    pibPerCapita = (float) (pib / populacao);
 
     // Exibição dos Dados das Cartas:
     // Exibe confirmação de cadastro e os valores inseridos para cada atributo da cidade, um por linha.
@@ -54,8 +65,10 @@ int main() {
     printf("%s • %s0%d\n\n", nomeCidade, estado, numCidade);
     printf("POPULAÇÃO - %d pessoas\n", populacao);
     printf("ÁREA - %.1f km²\n", area);
-    printf("PIB - %.2lf milhões de reais\n", pib);
+    printf("PIB - %.2f milhões de reais\n", pibMilhoes);
     printf("PONTOS TURÍSTICO - %d\n", pontosTur);
+    printf("DENSIDADE POPULACIONAL - %.2f habitantes/km²\n", densidade);
+    printf("PIB PER CAPITA - R$%.2f\n", pibPerCapita);
     printf("____________________________\n\n");
 
     return 0;
