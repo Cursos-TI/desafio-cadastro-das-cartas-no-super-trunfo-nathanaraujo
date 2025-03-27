@@ -4,37 +4,46 @@
 // Início do código
 
 int main() {
-    printf ("\nDesafio Super Trunfo - Países \n\n");
-    printf("____________________________\n\n");
+    printf ("\nDesafio Super Trunfo - Países \n");
+    printf("\n*******************************\n");
 
     // Declaração de variáveis do jogo
     //PRIMEIRA CIDADE
 
-    char estadoA[32];
-    char nomeCidadeA[50];
-    int numCidadeA;
-    unsigned long int populacaoA;
-    float areaA;
-    float pibA;
-    int pontosTurA;
+    char estadoA[32] = "A";
+    char nomeCidadeA[50] = "Belo Horizonte";
+    int numCidadeA = 01;
+    unsigned long int populacaoA = 2315560;
+    float areaA = 331.354;
+    float pibA = 105829.675;
+    int pontosTurA = 250;
     // nivel aventureiro
     float densidadeA;
     float pibPerCapitaA;
     float SuperPoderA;
 
     //SEGUNDA CIDADE
-    char estadoB[32];
-    char nomeCidadeB[50];
-    int numCidadeB;
-    unsigned long int populacaoB;
-    float areaB;
-    float pibB;
-    int pontosTurB;
+    char estadoB[32] = "A";
+    char nomeCidadeB[50] = "Uberlândia";
+    int numCidadeB = 02;
+    unsigned long int populacaoB = 754954;
+    float areaB = 4115.206;
+    float pibB = 43129.284;
+    int pontosTurB = 85;
     // nivel aventureiro
     float densidadeB;
     float pibPerCapitaB;
     float SuperPoderB;
 
+    densidadeA = (float) populacaoA / areaA;
+    pibPerCapitaA = (float)((pibA*1000000) / populacaoA);
+    SuperPoderA = (float) (populacaoA + areaA + pibA + pontosTurA + pibPerCapitaA - densidadeA);
+
+    densidadeB = (float)populacaoB / areaB;
+    pibPerCapitaB = (float)((pibB*1000000) / populacaoB);
+    SuperPoderB = (float)(populacaoB + areaB + pibB + pontosTurB + pibPerCapitaB - densidadeB);
+
+/*
     // Cadastro das Cartas
         // Solicita ao usuário que insira as informações DA PRIMEIRA CIDADE.
 
@@ -60,11 +69,6 @@ int main() {
         printf("Quantos pontos turísticos têm na cidade?\n");
         scanf("%d", &pontosTurA);
 
-        densidadeA = (float) populacaoA / areaA;
-
-        pibPerCapitaA = (float)((pibA*1000000) / populacaoA);
-
-        SuperPoderA = (float) (populacaoA + areaA + pibA + pontosTurA + pibPerCapitaA - densidadeA);
 
     
     // SEGUNDA CIDADE
@@ -94,12 +98,8 @@ int main() {
         printf("Quantos pontos turísticos têm na cidade?\n");
         scanf("%d", &pontosTurB);
 
-        densidadeB = (float)populacaoB / areaB;
 
-        pibPerCapitaB = (float)((pibB*1000000) / populacaoB);
-
-        SuperPoderB = (float)(populacaoB + areaB + pibB + pontosTurB + pibPerCapitaB - densidadeB);
-
+*/
         // Comparação de Cartas
             // Compara os valores inseridos para cada atributo da PRIMEIRA CIDADE com os valores inseridos para cada atributo da SEGUNDA CIDADE.
             
@@ -115,7 +115,7 @@ int main() {
     // Exibição dos Dados das Cartas:
             // Exibe confirmação de cadastro e os valores inseridos para cada atributo da PRIMEIRA CIDADE, um por linha.
 
-            printf("\n\n\n##### PRIMEIRA CARTA CADASTRADA #####\n");
+            printf("\n\n##### PRIMEIRA CARTA CADASTRADA #####\n");
             
             printf("____________________________\n\n");
             printf("%s • %s0%d\n\n", nomeCidadeA, estadoA, numCidadeA);
@@ -127,10 +127,11 @@ int main() {
             printf("PIB PER CAPITA - R$%.2f\n", pibPerCapitaA);
             printf("____________________________\n\n");
             printf("SUPER PODER - %.2f\n", SuperPoderA);
+            printf("\n============================\n");
 
             // Exibe confirmação de cadastro e os valores inseridos para cada atributo da SEGUNDA CIDADE, um por linha.
 
-            printf("\n\n\n##### SEGUNDA CARTA CADASTRADA #####\n");
+            printf("\n\n##### SEGUNDA CARTA CADASTRADA #####\n");
             
             printf("____________________________\n\n");
             printf("%s • %s0%d\n\n", nomeCidadeB, estadoB, numCidadeB);
@@ -142,11 +143,12 @@ int main() {
             printf("PIB PER CAPITA - R$%.2f\n", pibPerCapitaB);
             printf("____________________________\n\n");
             printf("SUPER PODER - %.2f\n", SuperPoderB);
+            printf("\n============================\n");
 
 
 
     // Comparação de Cartas
-    printf("\n\n##### COMPARAÇÃO DE CARTAS #####\n");
+    printf("\n##### COMPARAÇÃO DE CARTAS #####");
     printf("____________________________\n\n");
     printf("População: PRIMEIRA CARTA venceu? %d (1 • SIM | 0 • NÃO)\n", CompPopulacao);
     printf("Área: PRIMEIRA CARTA venceu? %d (1 • SIM | 0 • NÃO)\n", CompArea);
