@@ -88,7 +88,7 @@ int main() {
         printf("Qual é a área da cidade? (km²)\n");
         scanf("%f", &areaB);
 
-        printf("Qual é o PIB da cidade?\n");
+        printf("Qual é o PIB da cidade? (milhões de reais)\n");
         scanf("%f", &pibB);
 
         printf("Quantos pontos turísticos têm na cidade?\n");
