@@ -54,8 +54,8 @@ Acrescentando os cálculos de:
 
 ### 📥 Entrada de dados:
 
-Execute o arquivo 'CartasSuperTrunfo-aventureiro.c'
-Entre com as seguintes propriedades:
+Execute o arquivo 'CartasSuperTrunfo-mestre_EntradaValores.c'
+Entre com as seguintes propriedades de cadastro de duas cidades:
   - **Nome da cidade**
   - **Estado (A-H)**
   - **Código da Cidade (1-8)**
@@ -79,7 +79,9 @@ Acrescentando o dado:
 
 E realizará um comparativo entre os dados de cada cidade cadastrada para verificar qual a cidade vencedora em cada uma das propriedades fornecidas.
 
-Aproveite o jogo!
+Executando o arquivo 'CartasSuperTrunfo-mestre_ValoresDeclarados.c', o programa retornará com os dados já declarados para cada variável, realizando a comparação entre essas cartas.
+
+#### **Aproveite o jogo!**
 
 
 
